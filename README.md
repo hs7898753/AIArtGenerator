@@ -5,6 +5,8 @@ AI Art Generator
 
 This is a web app that generates AI art such as Audio, Image, Video and also Provide Program (code) for the problem.
 
+![Dashboard](image.png)
+
 ## Getting Started
 
 First, run the development server:
