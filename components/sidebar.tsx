@@ -75,7 +75,7 @@ const Sidebar = ({ apiLimitCount = 0, isPro= false,}: SidebarProps) => {
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
       <div className="px-3 py-2 flex-1">
         <Link href="/dashboard" className="flex items-center pl-3 mb-14">
-          <div className="relative w-12 h-12 mr-2">
+          <div className="relative w-32 h-20 ">
             <Image fill src="/Logo.png" alt="Logo" />
           </div>
           <h1 className={cn("text-2xl font-bold", poppins.className)}>
