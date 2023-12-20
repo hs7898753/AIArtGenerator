@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit";
 
 import OpenAI from "openai";
+import { checkSubscription } from "@/lib/subscription";
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
@@ -29,18 +30,22 @@ export async function POST(
 
 
     const freeTrial = await checkApiLimit();
+    const isPro = await checkSubscription();
 
-    if (!freeTrial ) {
+    if (!freeTrial && !isPro) {
       return new NextResponse("Free trial has expired. Please upgrade to pro.", { status: 403 });
     }
-   
+
+     
 
     const response = await openai.chat.completions.create({
         messages: messages,
         model: "gpt-3.5-turbo",
       });
 
-      await incrementApiLimit();
+      if(!isPro){
+        await incrementApiLimit();
+      }
 
     return new NextResponse(JSON.stringify(response));
   } catch (error) {
