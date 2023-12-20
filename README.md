@@ -1,11 +1,14 @@
 AI Art Generator
 ================
 
+Deployed On : https://ai-art-generator-luug4mn14-harsh-sharmas-projects-8b5f9d3d.vercel.app
+
 ## About
 
-This is a web app that generates AI art such as Audio, Image, Video and also Provide Program (code) for the problem.
+This is a web app that generates AI art such as Audio, Images, and Video and also Provides a Program (code) for the problem.
+![SS](https://github.com/hs7898753/AIArtGenerator/assets/112114562/71764f36-91f9-4161-a8f9-0afd11988a96)
 
-![Dashboard](./public/dashboard.png)
+
 
 ## Getting Started
 
